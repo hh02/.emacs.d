@@ -1,18 +1,9 @@
+(require 'package)
 
+(package-initialize) ;; You might already have this line
 
-(setq package-archives '(("gnu" . "https://mirrors.ustc.edu.cn/elpa/gnu/")
-                         ("melpa" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
-                         ("melpa-stable" . "https://mirrors.ustc.edu.cn/elpa/melpa-stable/")
-                         ("org" . "https://mirrors.ustc.edu.cn/elpa/org/")))
-
-
-;; Initialize packages
-(unless (bound-and-true-p package--initialized) ; To avoid warnings in 27
-  (setq package-enable-at-startup nil)          ; To prevent initializing twice
-  (package-initialize))
-
-
-;; Setup `use-package'
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -29,7 +20,7 @@
 
 ;; Required by `use-package'
 ;;(use-package diminish)
-(use-package bind-key)
+;;(use-package bind-key)
 
 ;; Auto update packages
 (use-package auto-package-update
