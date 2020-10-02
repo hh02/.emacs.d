@@ -20,7 +20,7 @@
 
 ;; Required by `use-package'
 ;;(use-package diminish)
-;;(use-package bind-key)
+(use-package bind-key)
 
 ;; Auto update packages
 (use-package auto-package-update
