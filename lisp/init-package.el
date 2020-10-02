@@ -4,6 +4,7 @@
 
 (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
                          ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+                         
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -23,10 +24,10 @@
 (use-package bind-key)
 
 ;; Auto update packages
-(use-package auto-package-update
-  :init
-  (setq auto-package-update-delete-old-versions t
-        auto-package-update-hide-results t)
-  (defalias 'upgrade-packages #'auto-package-update-now))
+;;(use-package auto-package-update
+;;  :init
+;;  (setq auto-package-update-delete-old-versions t
+;;        auto-package-update-hide-results t)
+;;  (defalias 'upgrade-packages #'auto-package-update-now))
 
 (provide 'init-package)

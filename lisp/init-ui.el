@@ -77,10 +77,15 @@
   (+my/better-font))
 
 
-;; 主题包									
-(use-package doom-themes)
+;; 主题包
 
-(load-theme 'doom-solarized-light t)
+(use-package doom-themes
+  :init
+
+  (load-theme 'doom-solarized-light t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config))
 
 (provide 'init-ui)
 

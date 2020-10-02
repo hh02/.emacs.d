@@ -79,6 +79,6 @@
 (setq-default tab-width 4)
 
 ;; 高亮对应的括号
-;;(show-paren-mode 1)
+(show-paren-mode 1)
 
 (provide 'init-basic)

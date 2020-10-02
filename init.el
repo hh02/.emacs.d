@@ -11,6 +11,6 @@
 (require 'init-package)
 (require 'init-ui)
 (require 'init-basic)
-;;(require 'init-edit) //自动补全括号
+;;(require 'init-edit) ;; 自动补全括号
 (require 'init-org)
 

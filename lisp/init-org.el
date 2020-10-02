@@ -23,6 +23,11 @@
     :init (setq org-superstar-headline-bullets-list '("⚫" "⚫" "⚫" "⚫")))
   ;; (setq org-ellipsis (if (char-displayable-p ?⏷) " ⏷" nil))
   
+  (use-package doom-themes 
+    :config 
+    ;; Corrects (and improves) org-mode's native fontification.
+    (doom-themes-org-config))
+  
   ;; <s Tab to completion org template
   ;;(require 'org-tempo)
   )
