@@ -56,14 +56,15 @@
   (if (display-graphic-p)
       (progn
         (set-face-attribute 'default nil
-			    :font "DejaVu Sans Mono"
-			    :height 130)
+			    :font "Hack" ;; "Hack", "DejaVu Sans Mono"
+			    :height 130 
+				:weight 'normal)
         ;; chinese font
         (dolist (charset '(kana han symbol cjk-misc bopomofo))
           (set-fontset-font (frame-parameter nil 'font)
                             charset
-                            (font-spec :family "Sarasa Mono SC Semibold"
-				       :size 20
+                            (font-spec :family "Sarasa Mono SC"
+									   :size 20
 	)))
 	)))
 
@@ -85,7 +86,7 @@
   (load-theme 'doom-solarized-light t)
 
   ;; Enable flashing mode-line on errors
-  (doom-themes-visual-bell-config))
+  (doom-themes-visual-bell-config)) 
 
 (provide 'init-ui)
 
